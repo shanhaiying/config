@@ -1,0 +1,61 @@
+;; -*- Emacs-Lisp -*-
+
+;; Time-stamp: <2013-02-26 01:28:46 Tuesday by zhaijiancheng>
+
+;; This  file is free  software; you  can redistribute  it and/or
+;; modify it under the terms of the GNU General Public License as
+;; published by  the Free Software Foundation;  either version 3,
+;; or (at your option) any later version.
+
+;; This file is  distributed in the hope that  it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR  A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You  should have  received a  copy of  the GNU  General Public
+;; License along with  GNU Emacs; see the file  COPYING.  If not,
+;; write  to  the Free  Software  Foundation,  Inc., 51  Franklin
+;; Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+(require 'ess-site)
+;; auto complete function
+
+;; (define-key ess-mode-map [f2] 'ess-r-args-show)
+;; (define-key ess-mode-map [f3] 'ess-r-args-insert)
+;; (define-key inferior-ess-mode-map [f2] 'ess-r-args-show)
+;; (define-key inferior-ess-mode-map [f3] 'ess-r-args-insert)
+
+;; (setq ess-ask-for-ess-directory nil)
+;; (setq ess-local-process-name "R")
+;; (setq ansi-color-for-comint-mode 'filter)
+;; (setq comint-scroll-to-bottom-on-input t)
+;; (setq comint-scroll-to-bottom-on-output t)
+;; (setq comint-move-point-for-output t)
+;; (defun my-ess-start-R () (interactive)
+;;   (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
+;;       (progn (delete-other-windows)
+;;              (setq w1 (selected-window))
+;;              (setq w1name (buffer-name))
+;;              (setq w2 (split-window w1 nil t)) (R) (set-window-buffer w2 "*R*") (set-window-buffer w1 w1name))))
+
+;; (defun my-ess-eval ()
+;;   (interactive)
+;;   (my-ess-start-R)
+;;   (if
+;;       (and transient-mark-mode mark-active)
+;;       (call-interactively 'ess-eval-region)
+;;     (call-interactively 'ess-eval-line-and-step)))
+
+;; (add-hook 'ess-mode-hook
+;;           '(lambda()
+;;              (local-set-key [(shift return)] 'my-ess-eval)))
+
+;; (add-hook 'inferior-ess-mode-hook
+;;           '(lambda()
+;;              (local-set-key [M-p] 'comint-previous-input)
+;;              (local-set-key [M-n] 'comint-next-input)))
+;; (add-hook 'Rnw-mode-hook
+;;           '(lambda()
+;;              (local-set-key [C-M-r] 'my-ess-eval)))
+
+(provide 'my-R-settings)

@@ -1,0 +1,41 @@
+n;; -*- Emacs-Lisp -*-
+
+;; Time-stamp: <2010-11-03 17:45:59 Wednesday by taoshanwen>
+
+(defconst my-emacs-path           "~/emacs/" "úÄ¬øÃ«øÔ¸emacsúÆÁù½£øª½úÊ¯ø»£ùÆÔúÄºø®òùÂØúÆÀø¨ğùºÉúÂà„")
+(defconst my-emacs-my-lisps-path  (concat my-emacs-path "my-lisps/") "úÄ¬øÃ¬ø®¸úÂÙù®óø¬¥úÆÀø§Ìmacs lispúÂ®øªñøÔ¸úÈßùªïùÈ¬")
+(defconst my-emacs-lisps-path     (concat my-emacs-path "lisps/") "úÄ¬øÃ¨ù¼§úÈåùÇ¯øÔ¸emacs lispúÂ®øªñøÔ¸úÈßùªïùÈ¬")
+(defconst my-emacs-templates-path (concat my-emacs-path "templates/") "Path for templates")
+
+;; úÄ®ø³Ómy-emacs-lisps-path'úÆÀø¨îø±ğúÄÀø²÷ù¥ôúÆÁù¨íùÆ»úÊ­ùÇ­ø´´úÂªù«Ëload-path'úÊ±ø¹£øÚÜ
+(load (concat my-emacs-my-lisps-path "my-subdirs"))
+(my-add-subdirs-to-load-path my-emacs-lisps-path)
+(my-add-subdirs-to-load-path my-emacs-my-lisps-path)
+
+;; úÀØ€XúÀÚø×½øŞøúÄÀù¤ëøÔ¸úÂÒø¿¥ø®ËúÄ¹°
+(require 'ahei-misc)
+
+;; úÂªøóÛøÈĞ`eval-after-load'úÂ¬øáÇùÊÕúÂ²ùªïø´¼úÊªøßÅùÀÆúÆÀø¨íùÀ³
+;; úÆºøğ¶val-after-loadúÊ«ùË±ø©õúÀØø»¡ùÊ¯úÈÎø¢éøÔ¸elispúÂ®øªñøÔ¸úÂ¬øáÊùÆã
+;; http://emacser.com/eval-after-load.htm
+(require 'eval-after-load)
+
+(require 'util)
+
+;; úÀØ€XúÀÚøÕÚmacsúÆÀø¨íù«ùúÈÖùÉ±ùÆÔ
+(require 'misc-settings)
+
+;; úÆâøÍµøàÁúÈÖùÉ±ùÆÔ
+(require 'coding-settings)
+
+;; CUAúÆÀø¨ïøŞçúÊÂù¶ûø¸ÒúÂÁøßÆøÆ³úÀİøÙÁø²ËúÂªù¢èøÌåúÀŞ¿
+(require 'cua-settings)
+
+;; úÆÅøóÙùÆÈúÂ®ùÁ§øŞİúÄ·øºşùÆÂ
+(require 'rect-mark-settings)
+
+;; úÊæøáÈøàÇúÊ¯ø»£ùÆÔ
+(require 'mouse-settings)
+
+;; úÂ§ù²öùÀ®markúÆÀø¨ìù»úúÀÚø×Àù¨ÆúÆãù¨÷ùÄ°úÀİùË°ùÆÆúÊÇøİÃù¼ÔúÄºù¿¤ùÈçúÆÀø¨ñ€
+CCL: Invalid command 11 (ccl_code = 31) at 79.
