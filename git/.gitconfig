@@ -1,0 +1,26 @@
+[user]
+    name = zhaijiancheng
+    email = enigma@pku.edu.cn
+[core]
+    editor = emacs
+    quotepath = false
+[alias]
+    co = checkout
+    ci = commit
+    br = branch
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    mg = merge
+    glog = log --pretty=oneline --graph
+    df = difftool
+[color]
+    ui = true
+[format]
+    pretty = oneline
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
