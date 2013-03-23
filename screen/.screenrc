@@ -1,0 +1,19 @@
+defflow off
+escape ^Tt
+startup_message off
+nonblock on
+defscrollback 10000
+#hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s"
+vbell off
+hardstatus on
+#termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+
+# Caption line
+caption always "%{= R}[ %{=b b}%-w%{=rb db}%>%n %t%{-}%+w%{-b}%< %=%{R}][%{M}%D %M %d %{G}%c%{R}]"
+
+# Dynamic title
+shelltitle '$ |bash'
+
+# Set xterm's title
+#hardstatus string "screen: %t"
